@@ -47,14 +47,12 @@ public class Trader<T> {
 
 
 
-
-
     /* TODO: Implement the method addToWishlist that takes an
      *       object of type T and adds it to this Trader's wishlist.
      */
-
-
-
+    public void addToWishlist(T object){
+        this.wishlist.add(object);
+    }
 
 
     /* TODO: Implement the method getSellingPrice that takes an
@@ -64,7 +62,12 @@ public class Trader<T> {
      *
      *       We will call this in exchangeMoney().
      */
-
+    public int getSellingPrice(T object){
+        if(object instanceof Tradable) {
+            return ((Tradable) object).getPrice();
+        }
+        return Tradable.MISSING_PRICE;
+    }
 
 
 
