@@ -70,8 +70,6 @@ public class Trader<T> {
     }
 
 
-
-
     /**
      * Exchange money from other to this Trader according to the price of item,
      * if other has enough money. Otherwise, returns False.
